@@ -37,4 +37,38 @@ LotArea(sf) Range: (0 - 523228)
 
 2. There are a couple of varibles that have special interest for our objective and special interest when looking into the confines of the data. We think that the price offers special interest because of its relation to other variables, as it is influenced by the other pieces of data. Some of the most influential pieces of data in relation is the date of the sale and the date the house was built. These can explain the price of a house and how it could be higher and lower in certain times.
 
+3.  The range of sale prices is from 0 to 20500000, which is a very large range at first glance. However, if you put it in the histogram, you see that there are only a couple of massive outliers dragging the data up to the millions. Most of the data lies under 1 million. This could cause interesting issues when correlating with different data.
+
+```{r}
+library(ggplot2)
+
+# Set the binwidth
+binwidth <- 150000
+
+# Plot the histogram
+ggplot(ames, aes(x = `Sale Price`)) +
+  geom_histogram(binwidth = binwidth, position = "identity", alpha = 0.4, color = "black", fill = "lightblue") +
+  labs(title = "Price of Houses",
+       x = "Price",
+       y = "Count") +
+  theme_minimal()
+```
+![image](https://github.com/DS202-at-ISU/lab-2-lab2_team13/assets/158088728/a1fe92cc-0b3b-4a40-921c-4add323c77c2)
+
+4a.(spenser) I decided to correlate the price with the date that the place was sold. I was expecting to find an upward trend where house prices have slowly crept up as a whole. However, that is not what I found; the scatter plot shows that they have stayed rather consistent. There's a good amount of variation with every year that is recorded.
+
+```{r}
+
+ggplot(ames, aes(x = `Sale Date`, y = `Sale Price`)) + 
+  geom_point() +
+  ylim(100, 500000)
+  labs(title = "Sale price over years",
+       x = "Sale Price",
+       y = "Sale Date") +
+  theme_minimal()
+```
+![image](https://github.com/DS202-at-ISU/lab-2-lab2_team13/assets/158088728/019d5154-ae6c-462a-aa09-79ffc1345d2b)
+
+
+
 
