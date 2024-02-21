@@ -69,6 +69,21 @@ ggplot(ames, aes(x = `Sale Date`, y = `Sale Price`)) +
 ```
 ![image](https://github.com/DS202-at-ISU/lab-2-lab2_team13/assets/158088728/019d5154-ae6c-462a-aa09-79ffc1345d2b)
 
+4b. (mohamed) The variable that can be closely related to the Sale Price would be the Total Living Area. The range of this variable is 6007 square feet, this would mean that most properties on the datset/list would span within the range of 6007 square feet.
+   Based on the scatterplot, we can see that the Sale Price and Total Living Area have a Directly proportional relationship, as the Total Living Area square footage increases, the Sale Price of that property also increases. These two variables share a positive relationship which would help closely describe how dependent they are of each other.
+   Some oddities I can see is the amount of outliers which drags the datapoints to a higher range, and the idea that a couple properties were sold for $0.
+   
+# Range Plot
+ggplot(ames, aes(x = `TotalLivingArea (sf)`)) +
+  geom_histogram()
+#Range Code
+Total_Living_Area_Range <- range(ames$`TotalLivingArea (sf)`, na.rm = TRUE)
+print(Total_Living_Area_Range)
+
+#ScatterPlot Code
+ggplot(data = ames, aes(x = log(`TotalLivingArea (sf)`), y = log(`Sale Price`))) +
+  geom_point()
+
 
 
 
