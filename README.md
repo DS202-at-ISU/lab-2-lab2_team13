@@ -35,4 +35,6 @@ TotalLivingArea (sf) Range: (0 - 6007)
 FinishedBsmtArea (sf) Range: (10.0 - 6496.0)
 LotArea(sf) Range: (0 - 523228)
 
+2. There are a couple of varibles that have special interest for our objective and special interest when looking into the confines of the data. We think that the price offers special interest because of its relation to other variables, as it is influenced by the other pieces of data. Some of the most influential pieces of data in relation is the date of the sale and the date the house was built. These can explain the price of a house and how it could be higher and lower in certain times.
+
 
