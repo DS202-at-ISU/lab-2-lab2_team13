@@ -73,6 +73,11 @@ ggplot(ames, aes(x = `Sale Date`, y = `Sale Price`)) +
    Based on the scatterplot, we can see that the Sale Price and Total Living Area have a Directly proportional relationship, as the Total Living Area square footage increases, the Sale Price of that property also increases. These two variables share a positive relationship which would help closely describe how dependent they are of each other.
    Some oddities I can see is the amount of outliers which drags the datapoints to a higher range, and the idea that a couple properties were sold for $0.
    
+```{r}
+library(ggplot2)
+library(classdata)
+ames
+?ames
 # Range Plot
 ggplot(ames, aes(x = `TotalLivingArea (sf)`)) +
   geom_histogram()
@@ -83,6 +88,13 @@ print(Total_Living_Area_Range)
 #ScatterPlot Code
 ggplot(data = ames, aes(x = log(`TotalLivingArea (sf)`), y = log(`Sale Price`))) +
   geom_point()
+   
+```
+![image]("C:\Users\moham\Desktop\DS 202\lab-2-lab2_team13\images\Lab 2  ScatterPlot - Mohamed.png")
+
+
+
+
 
 
 
