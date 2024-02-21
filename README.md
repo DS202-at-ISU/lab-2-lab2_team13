@@ -91,6 +91,7 @@ ggplot(data = ames, aes(x = log(`TotalLivingArea (sf)`), y = log(`Sale Price`)))
    
 ```
 ![image]("C:\Users\moham\Desktop\DS 202\lab-2-lab2_team13\images\Lab 2  ScatterPlot - Mohamed.png")
+// its not working but the image of my graph is in the images tab
 
 
 
