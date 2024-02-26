@@ -94,7 +94,7 @@ ggplot(data = ames, aes(x = log(`TotalLivingArea (sf)`), y = log(`Sale Price`)))
 // its not working but the image of my graph is in the images tab
 
 
-4. (Ryan) I decided to show the correlation between sale price and the number of acres the property is on. We have that the price ranges from $0 to $20,500,000 and the number of acres ranges from 0 acres to 12.012 acres.
+4. (Ryan) I decided to show the correlation between sale price and the type of property it is. The below image is a breakdown of price by the type of living space it is as listed in the Occupancy column. A few things to note are the section labeled NA, which is for any property in which the occupancy type was not filled out. Additionally, we can see that the occupancy type is the best indicator of price when looking at a Single Family / Owner Property as there is a noticable relation. Condominiums seem to be the least correlated, and surprisingly contain the most outliers. The final thing to note, is there are many properties with the price listed as 0, which explains the large bar at the $0 price point in most occupancy types.
 ```{r}
 library(ggplot2)
 library(tidyverse)
