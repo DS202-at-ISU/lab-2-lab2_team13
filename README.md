@@ -103,7 +103,7 @@ ggplot(ames, aes(x = `Sale Price`)) +
   geom_histogram() +
   facet_wrap(~ `Occupancy`, scales = "free")
 ```
-![image]()
+![image](https://github.com/DS202-at-ISU/lab-2-lab2_team13/blob/main/Screenshot%202024-02-25%20at%207.07.07%20PM.png?raw=true)
 
 
 
