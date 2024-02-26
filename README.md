@@ -97,9 +97,13 @@ ggplot(data = ames, aes(x = log(`TotalLivingArea (sf)`), y = log(`Sale Price`)))
 4. (Ryan) I decided to show the correlation between sale price and the number of acres the property is on. We have that the price ranges from $0 to $20,500,000 and the number of acres ranges from 0 acres to 12.012 acres.
 ```{r}
 library(ggplot2)
+library(tidyverse)
 
-
+ggplot(ames, aes(x = `Sale Price`)) +
+  geom_histogram() +
+  facet_wrap(~ `Occupancy`, scales = "free")
 ```
+![image]()
 
 
 
